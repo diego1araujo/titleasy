@@ -2,9 +2,6 @@
 
 This package is a HTML title generator for Laravel 4.
 
-[![Build Status](https://travis-ci.org/diego1araujo/titleasy.png)](http://travis-ci.org/diego1araujo/titleasy)
-[![Latest Stable Version](https://poser.pugx.org/diego1araujo/titleasy/v/stable.png)](https://packagist.org/packages/diego1araujo/titleasy) [![Total Downloads](https://poser.pugx.org/diego1araujo/titleasy/downloads.png)](https://packagist.org/packages/diego1araujo/titleasy)
-
 ## Installation
 
 Edit your project's `composer.json` file to require `diego1araujo/titleasy`.
