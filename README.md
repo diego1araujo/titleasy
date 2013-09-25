@@ -11,7 +11,7 @@ Edit your project's `composer.json` file to require `diego1araujo/titleasy`.
 		"diego1araujo/titleasy": "dev-master"
 	}
 
-Next step, update Composer from the CLI:
+Next, ruan the Composer update command:
 
     composer update
 
@@ -49,9 +49,16 @@ Switching to reverse order: (Set a third parameter on Get as TRUE)
 
 	Title::put('Users Page')
 	Title::get('My Website', '-', TRUE) // Output: Users Page - My Website
+	
+Multiple titles:
+
+	Title::put('Users Page')
+	Title::put('Editing')
+	Title::put('Username')
+	Title::get('My Website') // Output: My Website :: Users Page :: Editing :: Username
 
 Retrieving the last title added
 
 	Title::last()
 
-NOTE: This package was forked from [mywizz's title](https://github.com/mywizz/title-for-laravel). All credits belongs to Yunseok Kim.
+NOTE: This job was based on [mywizz's title](https://github.com/mywizz/title-for-laravel). Credits goes to him, also.
