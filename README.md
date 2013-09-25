@@ -1,4 +1,4 @@
-**Titleasy** - Build titles like a charm.
+# Titleasy - Build titles like a charm.
 
 This package is a HTML title generator for Laravel 4.
 
@@ -31,24 +31,24 @@ Find the `aliases` key in `app/config/app.php` and add a new item to the array
 
 ## Usage Example
 
-How to start:
+Starting:
 
 	Title::get('My Website') // Output: My Website
 	
-Adding a title
+Adding a title:
 
 	Title::put('Users Page')
 	Title::get('My Website') // Output: My Website :: Users Page
 	
-Changing the delimiter (Set a second parameter on Get)
+Changing the delimiter: (Set a second parameter on Get)
 
 	Title::put('Users Page')
-	Title::get('My Website', '-') // Output: My Website :: Users Page
+	Title::get('My Website', '-') // Output: My Website - Users Page
 	
-Switching to reverse order (Set a third parameter on Get as TRUE)
+Switching to reverse order: (Set a third parameter on Get as TRUE)
 
 	Title::put('Users Page')
-	Title::get('My Website', '-', TRUE) // Output: Users Page :: My Website
+	Title::get('My Website', '-', TRUE) // Output: Users Page - My Website
 	
 Retrieving the last title added
 
