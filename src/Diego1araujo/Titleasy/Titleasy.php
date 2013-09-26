@@ -23,11 +23,15 @@ class Titleasy {
 	 * @param  string	$title
 	 * @return void
 	 */
-	public static function put($title = NULL)
+	public static function put()
 	{
-		if ( ! $title OR strlen(trim($title)) === 0) return;
-
-		static::$titles[] = trim(strip_tags($title));
+		$args = func_get_args();
+		
+		foreach($args as $arg)
+		{
+			if( ! empty($arg))
+				static::$titles[] = trim(strip_tags($arg));
+		}
 	}
 
 	/**
@@ -48,22 +52,15 @@ class Titleasy {
 	 * @param bool      $reverse
 	 * @return string
 	 */
-	public static function get($default_title = NULL, $delimiter, $reverse = FALSE)
+	public static function get($default_title = NULL, $delimiter = NULL, $reverse = FALSE)
 	{
-		static $default_added = FALSE;
-
-		if ($default_added === FALSE)
+		if ( ! is_null($default_title))
 		{
-			if ( ! is_null($default_title))
-			{
-				array_unshift(static::$titles, $default_title);
-			}
-
-			$default_added = TRUE;
+			array_unshift(static::$titles, $default_title);
 		}
 
-		$delimiter = empty($delimiter) ? '::' : $delimiter;
-		return implode(' ' . $delimiter . ' ', $reverse === TRUE ? array_reverse(static::$titles) : static::$titles);
+		$dlmt = empty($delimiter) ? '::' : $delimiter;
+		return implode(' '.$dlmt.' ', $reverse === TRUE ? array_reverse(static::$titles) : static::$titles);
 	}
 
 }
