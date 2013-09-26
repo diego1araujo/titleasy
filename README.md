@@ -54,11 +54,11 @@ Multiple titles:
 
 	Title::put('Users Page')
 	Title::put('Editing')
-	Title::put('Username')
-	Title::get('My Website') // Output: My Website :: Users Page :: Editing :: Username
+	or just:
+	Title::put('Users Page', 'Editing')
 
 Retrieving the last title added
 
 	Title::last()
 
-NOTE: This job was based on [mywizz's title](https://github.com/mywizz/title-for-laravel). Credits goes to him, also.
+NOTE: This job was based on [mywizz's library](https://github.com/mywizz/title-for-laravel). Credits goes to him, also.
