@@ -11,54 +11,52 @@ Edit your project's `composer.json` file to require `diego1araujo/titleasy`.
 		"diego1araujo/titleasy": "dev-master"
 	}
 
-Next, ruan the Composer update command:
+Next, run the composer update command:
 
     composer update
 
-Find the `providers` key in `app/config/app.php` and add a new item to the array
+Open up `app/config/app.php`
 
-	'providers' => array(
-        // ...
-		'Diego1araujo\Titleasy\TitleasyServiceProvider',
-	)
+Find the `providers` key and add a new item to the array
+
+	'Diego1araujo\Titleasy\TitleasyServiceProvider',
 	
-Find the `aliases` key in `app/config/app.php` and add a new item to the array
+Find the `aliases` key and add a new item to the array
 
-	'aliases' => array(
-        // ...
-		'Title' => 'Diego1araujo\Titleasy\Facades\Titleasy',
-	)
+	'Title' => 'Diego1araujo\Titleasy\Facades\Titleasy',
 
-## Usage Example
+## Usage
 
-Starting:
-
-	Title::get('My Website') // Output: My Website
-
-Adding a title:
-
-	Title::put('Users Page')
-	Title::get('My Website') // Output: My Website :: Users Page
-	
-Changing the delimiter: (Set a second parameter on Get)
-
-	Title::put('Users Page')
-	Title::get('My Website', '-') // Output: My Website - Users Page
-
-Switching to reverse order: (Set a third parameter on Get as TRUE)
-
-	Title::put('Users Page')
-	Title::get('My Website', '-', TRUE) // Output: Users Page - My Website
-	
-Multiple titles:
-
-	Title::put('Users Page')
-	Title::put('Editing')
-	or just:
-	Title::put('Users Page', 'Editing')
+Starting
+```php
+Title::get('My Website') // Output: My Website
+```
+Adding a title
+```php
+Title::put('Users Page')
+Title::get('My Website') // Output: My Website :: Users Page
+```	
+Changing the delimiter (Set a second parameter on get())
+```php
+Title::put('Users Page')
+Title::get('My Website', '-') // Output: My Website - Users Page
+```
+Switching to reverse order (Set the third parameter on get() as TRUE)
+```php
+Title::put('Users Page')
+Title::get('My Website', '-', TRUE) // Output: Users Page - My Website
+```	
+Multiple titles
+```php
+Title::put('Users Page')
+Title::put('Editing')
+// or just:
+Title::put('Users Page', 'Editing')
+```
 
 Retrieving the last title added
-
-	Title::last()
+```php
+Title::last()
+```
 
 NOTE: This job was based on [mywizz's library](https://github.com/mywizz/title-for-laravel). Credits goes to him, also.
