@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/diego1araujo/titleasy.png?branch=master)](https://travis-ci.org/diego1araujo/titleasy)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/diego1araujo/titleasy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 # Titleasy - Build titles like a charm.
 
 This package is a HTML title generator for Laravel 4.
