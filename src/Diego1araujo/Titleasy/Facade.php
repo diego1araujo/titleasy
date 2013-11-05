@@ -1,8 +1,6 @@
-<?php namespace Diego1araujo\Titleasy\Facades;
+<?php namespace Diego1araujo\Titleasy;
 
-use Illuminate\Support\Facades\Facade;
-
-class Titleasy extends Facade {
+class Facade extends \Illuminate\Support\Facades\Facade {
 
     /**
      * Get the registered name of the component.

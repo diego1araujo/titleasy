@@ -1,8 +1,6 @@
 <?php namespace Diego1araujo\Titleasy;
 
-use Illuminate\Support\ServiceProvider;
-
-class TitleasyServiceProvider extends ServiceProvider {
+class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
