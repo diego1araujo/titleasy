@@ -7,10 +7,10 @@ This package is a HTML title generator for Laravel 4.
 
 ## Installation
 
-Edit your project's `composer.json` file to require `diego1araujo/titleasy`.
+Edit `composer.json` file to require `diego1araujo/titleasy`.
 
     "require": {
-		"laravel/framework": "4.0.*",
+		...
 		"diego1araujo/titleasy": "dev-master"
 	}
 
@@ -22,11 +22,11 @@ Open up `app/config/app.php`
 
 Find the `providers` key and add a new item to the array
 
-	'Diego1araujo\Titleasy\TitleasyServiceProvider',
+	'Diego1araujo\Titleasy\ServiceProvider',
 	
 Find the `aliases` key and add a new item to the array
 
-	'Title' => 'Diego1araujo\Titleasy\Facades\Titleasy',
+	'Title' => 'Diego1araujo\Titleasy\Facade',
 
 ## Usage
 
