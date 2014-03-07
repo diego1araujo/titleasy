@@ -1,0 +1,11 @@
+{
+  "providers": [
+    "Diego1araujo\Titleasy\ServiceProvider"
+  ],
+  "aliases": [
+    {
+      "alias": "Title",
+      "facade": "Diego1araujo\Titleasy\Facade"
+    }
+  ]
+}
