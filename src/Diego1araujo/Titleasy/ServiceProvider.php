@@ -27,9 +27,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
 	public function register()
 	{
 		$this->app['titleasy'] = $this->app->share(function($app)
-        {
-            return new Titleasy();
-        });
+		{
+			return new Titleasy();
+		});
 	}
 
 	/**
