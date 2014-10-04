@@ -21,11 +21,15 @@ Open up `app/config/app.php`
 
 Find the `providers` key and add a new item to the array
 
-	'Diego1araujo\Titleasy\ServiceProvider',
-	
+```php
+'Diego1araujo\Titleasy\ServiceProvider',
+```
+
 Find the `aliases` key and add a new item to the array
 
-	'Title' => 'Diego1araujo\Titleasy\Facade',
+```php
+'Title' => 'Diego1araujo\Titleasy\Facade',
+```
 
 ## Usage
 
@@ -36,17 +40,17 @@ Title::get('My Website') // Output: My Website
 Adding a title
 ```php
 Title::put('Users Page')
-Title::get('My Website') // Output: My Website :: Users Page
+Title::get('My Website') // Output: My Website - Users Page
 ```	
 Changing the delimiter (Set a second parameter on get())
 ```php
 Title::put('Users Page')
-Title::get('My Website', '-') // Output: My Website - Users Page
+Title::get('My Website', '|') // Output: My Website | Users Page
 ```
 Switching to reverse order (Set the third parameter on get() as TRUE)
 ```php
 Title::put('Users Page')
-Title::get('My Website', '-', TRUE) // Output: Users Page - My Website
+Title::get('My Website', '|', TRUE) // Output: Users Page | My Website
 ```	
 Multiple titles
 ```php
@@ -59,6 +63,28 @@ Title::put('Users Page', 'Editing')
 Retrieving the last title added
 ```php
 Title::last()
+```
+
+## Out of Laravel
+
+Require via composer
+
+	composer require diego1araujo/titleasy
+	
+When asked for a version, choose:
+
+	dev-master
+	
+Create a index.php like:
+
+```php
+<?php
+require_once 'vendor/autoload.php';
+
+use Diego1araujo\Titleasy\Titleasy as Title;
+
+Title::put('Users Page');
+echo Title::get('My Website');
 ```
 
 NOTE: This job was based on [mywizz's library](https://github.com/mywizz/title-for-laravel). Credits goes to him, also.
