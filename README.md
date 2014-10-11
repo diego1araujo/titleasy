@@ -31,6 +31,17 @@ Find the `aliases` key and add a new item to the array
 'Title' => 'Diego1araujo\Titleasy\Facade',
 ```
 
+## Methods
+
+```php
+put  - add titles. return: void
+last - retrieve last title added. return: string
+get  - build the title. return: string. there are 3 params:
+		- site name
+		- delimiter (default: -)
+		- reverse mode (default: false)
+```
+
 ## Usage
 
 Starting
@@ -42,12 +53,12 @@ Adding a title
 Title::put('Users Page')
 Title::get('My Website') // Output: My Website - Users Page
 ```	
-Changing the delimiter (Set a second parameter on get())
+Changing the delimiter (Set a second parameter on get)
 ```php
 Title::put('Users Page')
 Title::get('My Website', '|') // Output: My Website | Users Page
 ```
-Switching to reverse order (Set the third parameter on get() as TRUE)
+Switching to reverse order (Set a third parameter on get as TRUE)
 ```php
 Title::put('Users Page')
 Title::get('My Website', '|', TRUE) // Output: Users Page | My Website
