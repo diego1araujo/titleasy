@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Diego1araujo\\Titleasy\\": "src/"
+            "Diego1araujo\\Titleasy\\": "src/Diego1araujo/Titleasy"
         }
     },
     "minimum-stability": "dev"
