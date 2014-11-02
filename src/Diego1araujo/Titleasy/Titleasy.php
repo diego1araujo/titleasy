@@ -52,12 +52,10 @@ class Titleasy {
 	 * @param  bool    $reverse
 	 * @return string
 	 */
-	public static function get($default_title = NULL, $delimiter = NULL, $reverse = FALSE)
+	public static function get($default_title = NULL, $delimiter = '-', $reverse = FALSE)
 	{
-		if ( $default_title)
+		if ($default_title)
 			array_unshift(static::$titles, $default_title);
-
-		if ( ! $delimiter) $delimiter = '-';
 
 		return implode(' ' . $delimiter . ' ', $reverse === TRUE ? array_reverse(static::$titles) : static::$titles);
 	}
