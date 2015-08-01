@@ -1,6 +1,6 @@
 {
     "name": "diego1araujo/titleasy",
-    "description": "Build titles like a charm in Laravel 4/5",
+    "description": "Build titles like a charm in Laravel 5",
     "keywords": ["laravel", "title"],
     "license": "BSD-2-Clause",
     "authors": [
@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "~4|~5"
+        "php": ">=5.4.0",
+        "illuminate/support": "~5"
     },
     "autoload": {
-        "psr-0": {
-            "Diego1araujo\\Titleasy": "src/"
+        "psr-4": {
+            "Diego1araujo\\Titleasy\\": "src/"
         }
     },
     "minimum-stability": "dev"

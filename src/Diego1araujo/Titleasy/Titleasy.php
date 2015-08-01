@@ -1,4 +1,7 @@
-<?php namespace Diego1araujo\Titleasy;
+<?php
+
+namespace Diego1araujo\Titleasy;
+
 /**
  * Titleasy
  *
@@ -7,8 +10,8 @@
  * Package by Diego Araujo <diego77araujo@gmail.com>
  * Based on Yunseok Kim's HTML Title Generator
  */
-
-class Titleasy {
+class Titleasy
+{
 
 	/**
 	 * The titles
@@ -20,17 +23,16 @@ class Titleasy {
 	/**
 	 * Add title
 	 *
-	 * @param string $title
 	 * @return void
 	 */
 	public static function put()
 	{
 		$args = func_get_args();
 
-		foreach($args as $arg)
-		{
-			if ( ! empty($arg))
+		foreach($args as $arg) {
+			if ( ! empty($arg)) {
 				static::$titles[] = trim(strip_tags($arg));
+			}
 		}
 	}
 
@@ -54,8 +56,9 @@ class Titleasy {
 	 */
 	public static function get($default_title = NULL, $delimiter = '-', $reverse = FALSE)
 	{
-		if ($default_title)
+		if ( ! is_null($default_title)) {
 			array_unshift(static::$titles, $default_title);
+		}
 
 		return implode(' ' . $delimiter . ' ', $reverse === TRUE ? array_reverse(static::$titles) : static::$titles);
 	}
