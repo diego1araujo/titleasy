@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/diego1araujo/titleasy.png?branch=master)](https://travis-ci.org/diego1araujo/titleasy)
+[![Build Status](https://travis-ci.org/diego1araujo/titleasy.png?branch=1.0)](https://travis-ci.org/diego1araujo/titleasy)
 
 ## Titleasy - Build titles like a charm.
 
@@ -10,7 +10,7 @@ Edit `composer.json` file to require this package.
 
     "require": {
 		...
-		"diego1araujo/titleasy": "dev-master"
+		"diego1araujo/titleasy": "1.*"
 	}
 
 Next, run the composer update command:
