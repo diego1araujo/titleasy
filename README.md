@@ -1,23 +1,18 @@
-[![Build Status](https://travis-ci.org/diego1araujo/titleasy.png?branch=1.0)](https://travis-ci.org/diego1araujo/titleasy)
+[![Build Status](https://img.shields.io/travis/diego1araujo/titleasy.svg?branch=1.0&style=flat-square)](https://travis-ci.org/diego1araujo/titleasy)
 
 ## Titleasy - Build titles like a charm.
 
 This package is an HTML title generator for Laravel 5.*
 
+### For Laravel 4, use the [master branch](https://github.com/diego1araujo/titleasy/tree/master)!
+
 ## Installation
 
-Edit `composer.json` file to require this package.
+Require this package with composer:
 
-    "require": {
-		...
-		"diego1araujo/titleasy": "1.*"
-	}
+    composer require diego1araujo/titleasy
 
-Next, run the composer update command:
-
-    composer update
-
-Open up `app/config/app.php`
+Open up `config/app.php`
 
 Find the `providers` key and add a new item to the array
 
