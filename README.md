@@ -2,7 +2,9 @@
 
 ## Titleasy - Build titles like a charm.
 
-This package is an HTML title generator for Laravel 4/5.
+This package is an HTML title generator for Laravel 4.
+
+### For Laravel 5, use the [1.0 branch](https://github.com/diego1araujo/titleasy/tree/1.0)!
 
 ## Installation
 
@@ -52,7 +54,7 @@ Adding a title
 ```php
 Title::put('Users Page')
 Title::get('My Website') // Output: My Website - Users Page
-```	
+```
 Changing the delimiter (Set a second parameter on get)
 ```php
 Title::put('Users Page')
@@ -62,7 +64,7 @@ Switching to reverse order (Set a third parameter on get as TRUE)
 ```php
 Title::put('Users Page')
 Title::get('My Website', '|', TRUE) // Output: Users Page | My Website
-```	
+```
 Multiple titles
 ```php
 Title::put('Users Page')
@@ -81,11 +83,11 @@ Title::last()
 Require via composer
 
 	composer require diego1araujo/titleasy
-	
+
 When asked for a version, choose:
 
 	dev-master
-	
+
 Create a index.php like:
 
 ```php

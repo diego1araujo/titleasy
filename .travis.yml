@@ -3,8 +3,9 @@ language: php
 branches:
   only:
     - master
+    - 1.0
 
-php: 
+php:
   - 5.3
   - 5.4
   - 5.5
