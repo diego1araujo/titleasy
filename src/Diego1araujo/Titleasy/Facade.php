@@ -1,12 +1,16 @@
-<?php namespace Diego1araujo\Titleasy;
+<?php
 
-class Facade extends \Illuminate\Support\Facades\Facade {
+namespace Diego1araujo\Titleasy;
 
-	/**
-	 * Get the registered name of the component.
-	 *
-	 * @return string
-	 */
-	protected static function getFacadeAccessor() { return 'titleasy'; }
-
+class Facade extends \Illuminate\Support\Facades\Facade
+{
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'titleasy';
+    }
 }
