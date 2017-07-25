@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0",
         "illuminate/support": "~5"
     },
     "autoload": {
@@ -18,5 +18,19 @@
             "Diego1araujo\\Titleasy\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0"
+        },
+        "laravel": {
+            "providers": [
+                "Diego1araujo\\Titleasy\\ServiceProvider"
+            ],
+            "aliases": {
+                "Title": "Diego1araujo\\Titleasy\\Facade"
+            }
+        }
+    }
 }
